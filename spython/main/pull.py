@@ -23,7 +23,7 @@ import os
 import re
 import sys
 
-def pull(self, 
+def pull(self,
          image=None,
          name=None,
          pull_folder='',
@@ -33,7 +33,7 @@ def pull(self,
          stream=False):
 
     '''pull will pull a singularity hub or Docker image
-        
+
        Parameters
        ==========
        image: the complete image uri. If not provided, the client loaded is used
@@ -45,7 +45,7 @@ def pull(self,
        name: a custom name to use, to override default
        ext: if no name specified, the default extension to use.
 
-    ''' 
+    '''
     from spython.utils import check_install
     check_install()
 
@@ -75,7 +75,7 @@ def pull(self,
 
     if force is True:
         cmd = cmd + ["--force"]
-   
+
     cmd.append(image)
     bot.info(' '.join(cmd))
 
